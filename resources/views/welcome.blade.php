@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 
-<body style="background-color: #3e3a0e;">
+<body style="background-color: #000000d6;">
 
     <div class="container">
         <div class="row">
