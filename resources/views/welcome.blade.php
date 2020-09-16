@@ -12,7 +12,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 offset-lg-2" style="margin-top: 150px;">
+            <div class="col-lg-7 offset-lg-2" style="margin-top: 170px;">
                 <div class="card" style="box-shadow: inset 0 0 10px #000000;">
                     <div class="card-header">
                         Facebook Video Download
