@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7 offset-lg-2" style="margin-top: 40px;">
-                <div id="divVideo" class="embed-responsive embed-responsive-16by9">
+                <div id="divVideo" class="embed-responsive embed-responsive-16by9" style="display: none;">
                     <video controls>
                         <source id="video_source" class="embed-responsive-item" src="" allowfullscreen>
                     </video>
@@ -29,7 +29,7 @@
                             <input type="text" id="video_url" class="form-control" name="video_url" value="" placeholder="Fill FB video url" />
                         </div>
                         <button class="btn btn-sm btn-primary btn-block" id="download_button">Download</button>
-                        <div id="spinner" class="spinner-border offset-5 text-primary"></div>
+                        <div id="spinner" class="spinner-border offset-5 text-primary" style="display: none;"></div>
                     </div>
                 </div>
             </div>
@@ -42,11 +42,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
     <script>
-        $(document).ready(function(){
-            $('#spinner').hide();        
-            $('#divVideo').hide();
-        });
-
         $('#download_button').click(function() {
             var video_url = $('#video_url').val();
             if (video_url) {
@@ -57,7 +52,7 @@
                         video_url: video_url,
                     },
                     beforeSend: function(result) {
-                        $('#spinner').show();
+                        $('#spinner').css('display','block');
                         $('#download_button').hide();
                     },
                     success: function(result) {
@@ -70,7 +65,7 @@
                         $("#divVideo video")[0].load();
 
                         $('#spinner').hide();
-                        $('#divVideo').show();
+                        $('#divVideo').css('display','block');
                         $('#download_button').show();
                     }
                 });
