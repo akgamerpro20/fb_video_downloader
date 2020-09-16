@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/','HomeController@index');
-Route::post('/video_link', 'HomeController@video_link')->name('video_link');
+Route::get('/video_link', 'HomeController@video_link')->name('video_link');
 Route::get('/video', 'HomeController@video')->name('video');

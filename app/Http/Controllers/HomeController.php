@@ -17,7 +17,8 @@ class HomeController extends Controller
         $data = $this->url_get_contents($request->video_url);
         $hdlink = $this->hdLink($data);
         $sdlink = $this->sdLink($data);
-        return redirect()->route('video',['hdlink' => $hdlink, 'sdlink' => $sdlink]);
+        // return redirect()->route('video',['hdlink' => $hdlink, 'sdlink' => $sdlink]);
+        return response()->json(['hdlink' => $hdlink, 'sdlink' => $sdlink]);
     }
 
     public function video(Request $request)
