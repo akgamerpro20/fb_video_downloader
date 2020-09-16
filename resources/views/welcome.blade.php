@@ -29,7 +29,9 @@
                             <input type="text" id="video_url" class="form-control" name="video_url" value="" placeholder="Fill FB video url" />
                         </div>
                         <button class="btn btn-sm btn-primary btn-block" id="download_button">Download</button>
-                        <div id="spinner" class="spinner-border offset-5 text-primary" style="display: none;"></div>
+                        <div class="col-12">
+                            <div id="spinner" class="spinner-border text-primary offset-5" style="display: none;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -52,7 +54,7 @@
                         video_url: video_url,
                     },
                     beforeSend: function(result) {
-                        $('#spinner').css('display','block');
+                        $('#spinner').css('display', 'block');
                         $('#download_button').hide();
                     },
                     success: function(result) {
@@ -65,7 +67,7 @@
                         $("#divVideo video")[0].load();
 
                         $('#spinner').hide();
-                        $('#divVideo').css('display','block');
+                        $('#divVideo').css('display', 'block');
                         $('#download_button').show();
                     }
                 });
