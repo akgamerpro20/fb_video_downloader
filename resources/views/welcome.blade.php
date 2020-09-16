@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 
-<body>
+<body style="background-color: #000000d6;">
 
     <div class="container">
         <div class="row">
             <div class="col-lg-7 offset-lg-2" style="margin-top: 150px;">
-                <div class="card">
+                <div class="card" style="box-shadow: inset 0 0 10px #000000;">
                     <div class="card-header">
                         Facebook Video Download
                     </div>
