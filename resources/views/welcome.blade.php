@@ -26,7 +26,7 @@
                     </div>
                     <div class="card-body">
                         <div class="form-group">
-                            <input type="text" id="video_url" class="form-control" name="video_url" value="" placeholder="Fill FB video url" />
+                            <input type="text" id="video_url" class="form-control" name="video_url" value="{{$video_url ? $video_url : ''}}" placeholder="Fill FB video url" />
                         </div>
                         <button class="btn btn-sm btn-primary btn-block" id="download_button">Download</button>
                         <div class="col-12">

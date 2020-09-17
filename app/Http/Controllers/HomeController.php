@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {       
-        return view('welcome');
+        $video_url = $request->video_url;
+        return view('welcome',compact('video_url'));
     }
 
     public function video_link(Request $request)
