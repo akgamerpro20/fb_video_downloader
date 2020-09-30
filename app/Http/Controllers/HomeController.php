@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Count;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,6 +15,15 @@ class HomeController extends Controller
 
     public function video_link(Request $request)
     {
+        $count = Count::first();
+        if($count){
+            $count->count += 1;
+            $count->update();
+        }else{
+            $count = new Count();
+            $count->count = 1;
+            $count->save();
+        }
         // $url = "https://www.facebook.com/mmsubsongs/videos/326342431775747/";
         $data = $this->url_get_contents($request->video_url);
         $hdlink = $this->hdLink($data);
